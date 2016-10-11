@@ -64,6 +64,17 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+	// #header { border:1px solid #000; width:100px; height:20px;
+	//     margin:0 0 5px 0;
+	// }
+	// #content { border:1px solid #000; width:100px; height:50px;
+	//     margin:5px 0 5px 0;
+	// }
+	// #footer { border:1px solid #000; width:100px; height:20px;
+	//     margin:5px 0 0 0;
+	// }
+
+
 	var Main = function (_React$Component) {
 	    _inherits(Main, _React$Component);
 
@@ -76,10 +87,63 @@
 	    _createClass(Main, [{
 	        key: 'render',
 	        value: function render() {
+	            var container = {
+	                position: 'relative',
+	                padding: '0 0 0 55px'
+	            };
+
+	            var sidebar = {
+	                position: 'absolute',
+	                top: 0,
+	                bottom: 0,
+	                left: 0,
+	                width: 50,
+	                background: '#000'
+	            };
+
+	            var header = {
+	                border: 1,
+	                solid: '#000',
+	                width: 100,
+	                height: 20,
+	                margin: '0 0 5px 0'
+	            };
+
+	            var content = {
+	                border: 1,
+	                solid: '#000',
+	                width: 100,
+	                height: 50,
+	                margin: '5px 0 5px 0'
+	            };
+
+	            var footer = {
+	                border: 1,
+	                solid: '#000',
+	                width: 100,
+	                height: 20,
+	                margin: '5px 0 0 0'
+	            };
+
 	            return _react2.default.createElement(
 	                'div',
-	                null,
-	                'Hello World'
+	                { style: container },
+	                _react2.default.createElement('div', { style: sidebar }),
+	                _react2.default.createElement(
+	                    'div',
+	                    { style: header },
+	                    'whoa'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { style: content },
+	                    _react2.default.createElement(
+	                        'h3',
+	                        null,
+	                        'Hello'
+	                    )
+	                ),
+	                _react2.default.createElement('div', { style: footer })
 	            );
 	        }
 	    }]);
