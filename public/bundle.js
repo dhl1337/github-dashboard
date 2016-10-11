@@ -87,63 +87,83 @@
 	    _createClass(Main, [{
 	        key: 'render',
 	        value: function render() {
-	            var container = {
-	                position: 'relative',
-	                padding: '0 0 0 55px'
-	            };
 
-	            var sidebar = {
-	                position: 'absolute',
-	                top: 0,
-	                bottom: 0,
-	                left: 0,
-	                width: 50,
-	                background: '#000'
-	            };
-
-	            var header = {
-	                border: 1,
-	                solid: '#000',
-	                width: 100,
-	                height: 20,
-	                margin: '0 0 5px 0'
-	            };
-
-	            var content = {
-	                border: 1,
-	                solid: '#000',
-	                width: 100,
-	                height: 50,
-	                margin: '5px 0 5px 0'
-	            };
-
-	            var footer = {
-	                border: 1,
-	                solid: '#000',
-	                width: 100,
-	                height: 20,
-	                margin: '5px 0 0 0'
+	            var styles = {
+	                container: {
+	                    width: '100%',
+	                    height: '100%'
+	                },
+	                sidebar: {
+	                    width: 250,
+	                    height: '100%',
+	                    float: 'left',
+	                    backgroundColor: '#5C4B51'
+	                },
+	                content: {
+	                    marginLeft: 100,
+	                    height: '100%',
+	                    backgroundColor: '#F2EBBF'
+	                },
+	                image: {
+	                    borderRadius: '50%',
+	                    height: 100,
+	                    width: 100,
+	                    verticalAlign: 'middle',
+	                    marginRight: 5
+	                },
+	                profile: {
+	                    backgroundColor: '#8CBEB2',
+	                    padding: 25
+	                },
+	                nav: {
+	                    padding: 20
+	                }
 	            };
 
 	            return _react2.default.createElement(
 	                'div',
-	                { style: container },
-	                _react2.default.createElement('div', { style: sidebar }),
+	                { style: styles.container },
 	                _react2.default.createElement(
 	                    'div',
-	                    { style: header },
-	                    'whoa'
+	                    { style: styles.sidebar },
+	                    _react2.default.createElement(
+	                        'section',
+	                        { style: styles.profile },
+	                        _react2.default.createElement('img', { src: 'http://www.geo-jobe.com/wp-content/uploads/2016/06/dan360.png', alt: '', style: styles.image }),
+	                        _react2.default.createElement(
+	                            'span',
+	                            null,
+	                            'Dan Le'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'section',
+	                        { style: styles.nav },
+	                        _react2.default.createElement(
+	                            'ul',
+	                            null,
+	                            _react2.default.createElement(
+	                                'li',
+	                                null,
+	                                'Overview'
+	                            ),
+	                            _react2.default.createElement(
+	                                'li',
+	                                null,
+	                                'Repositories'
+	                            )
+	                        )
+	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'div',
-	                    { style: content },
+	                    { style: styles.content },
 	                    _react2.default.createElement(
 	                        'h3',
 	                        null,
 	                        'Hello'
 	                    )
-	                ),
-	                _react2.default.createElement('div', { style: footer })
+	                )
 	            );
 	        }
 	    }]);

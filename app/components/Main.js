@@ -15,54 +15,57 @@ import ReactDOM from 'react-dom';
 
 class Main extends React.Component {
     render() {
-        const container = {
-            position: 'relative',
-            padding: '0 0 0 55px'
-        };
 
-        const sidebar = {
-            position: 'absolute',
-            top: 0,
-            bottom: 0,
-            left: 0,
-            width: 50,
-            background: '#000',
-        };
-
-        const header = {
-            border: 1,
-            solid: '#000',
-            width: 100,
-            height: 20,
-            margin: '0 0 5px 0'
-        };
-
-        const content = {
-            border:1,
-            solid:'#000',
-            width:100,
-            height:50,
-            margin:'5px 0 5px 0'
-        };
-
-        const footer = {
-            border:1,
-            solid: '#000',
-            width:100,
-            height:20,
-            margin: '5px 0 0 0'
+        const styles = {
+            container: {
+                width: '100%',
+                height: '100%'
+            },
+            sidebar: {
+                width: 250,
+                height: '100%',
+                float: 'left',
+                backgroundColor: '#5C4B51',
+            },
+            content: {
+                marginLeft: 100,
+                height: '100%',
+                backgroundColor: '#F2EBBF'
+            },
+            image: {
+                borderRadius: '50%',
+                height: 100,
+                width: 100,
+                verticalAlign: 'middle',
+                marginRight: 5
+            },
+            profile: {
+                backgroundColor: '#8CBEB2',
+                padding: 25,
+            },
+            nav: {
+                padding: 20
+            }
         };
 
         return (
-            <div style={container}>
-                <div style={sidebar}></div>
-                <div style={header}>
-                    whoa
+            <div style={styles.container}>
+                <div style={styles.sidebar}>
+                    <section style={styles.profile}>
+                        <img src="http://www.geo-jobe.com/wp-content/uploads/2016/06/dan360.png" alt="" style={styles.image}/>
+                        <span>Dan Le</span>
+                    </section>
+                    <section style={styles.nav}>
+                        <ul>
+                            <li>Overview</li>
+                            <li>Repositories</li>
+                        </ul>
+                    </section>
+
                 </div>
-                <div style={content}>
+                <div style={styles.content}>
                     <h3>Hello</h3>
                 </div>
-                <div style={footer}></div>
             </div>
         )
     }
