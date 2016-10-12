@@ -100,6 +100,49 @@
 	                }]
 	            };
 
+	            var donutChart = {
+	                labels: ["Red", "Blue", "Yellow"],
+	                datasets: [{
+	                    data: [300, 50, 100],
+	                    backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+	                    hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"]
+	                }]
+	            };
+
+	            var barChart = {
+	                labels: ["January", "February", "March", "April", "May", "June", "July"],
+	                datasets: [{
+	                    label: "My First dataset",
+	                    backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
+	                    borderColor: ['rgba(255,99,132,1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
+	                    borderWidth: 1,
+	                    data: [65, 59, 100, 81, 56, 55, 40]
+	                }]
+	            };
+
+	            var radarData = {
+	                labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
+	                datasets: [{
+	                    label: "My First dataset",
+	                    backgroundColor: "rgba(179,181,198,0.2)",
+	                    borderColor: "rgba(179,181,198,1)",
+	                    pointBackgroundColor: "rgba(179,181,198,1)",
+	                    pointBorderColor: "#fff",
+	                    pointHoverBackgroundColor: "#fff",
+	                    pointHoverBorderColor: "rgba(179,181,198,1)",
+	                    data: [65, 59, 90, 81, 56, 55, 40]
+	                }, {
+	                    label: "My Second dataset",
+	                    backgroundColor: "rgba(255,99,132,0.2)",
+	                    borderColor: "rgba(255,99,132,1)",
+	                    pointBackgroundColor: "rgba(255,99,132,1)",
+	                    pointBorderColor: "#fff",
+	                    pointHoverBackgroundColor: "#fff",
+	                    pointHoverBorderColor: "rgba(255,99,132,1)",
+	                    data: [28, 48, 40, 19, 96, 27, 100]
+	                }]
+	            };
+
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'ui stackable grid' },
@@ -112,7 +155,22 @@
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: 'item' },
-	                            _react2.default.createElement('img', { className: 'ui mini circular image', src: 'http://www.geo-jobe.com/wp-content/uploads/2016/06/dan360.png' })
+	                            _react2.default.createElement('img', { className: 'ui tiny middle aligned circular image', src: 'http://www.geo-jobe.com/wp-content/uploads/2016/06/dan360.png' }),
+	                            _react2.default.createElement(
+	                                'span',
+	                                null,
+	                                ' Dan Le'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'item' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'ui fluid icon input' },
+	                                _react2.default.createElement('input', { type: 'text', placeholder: 'Search for user ....' }),
+	                                _react2.default.createElement('i', { className: 'search icon' })
+	                            )
 	                        ),
 	                        _react2.default.createElement(
 	                            'a',
@@ -139,16 +197,6 @@
 	                        { className: 'ui container' },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'ui basic segment' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'ui fluid icon input' },
-	                                _react2.default.createElement('input', { type: 'text', placeholder: 'Search for user ....' }),
-	                                _react2.default.createElement('i', { className: 'search icon' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
 	                            { className: 'ui grid' },
 	                            _react2.default.createElement(
 	                                'div',
@@ -162,7 +210,11 @@
 	                            _react2.default.createElement(
 	                                'div',
 	                                { className: 'four wide column' },
-	                                _react2.default.createElement('div', { className: 'ui raised segment' })
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'ui raised segment' },
+	                                    _react2.default.createElement(_reactChartjs.Doughnut, { data: donutChart })
+	                                )
 	                            )
 	                        ),
 	                        _react2.default.createElement(
@@ -174,11 +226,7 @@
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'ui raised segment' },
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        null,
-	                                        'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.'
-	                                    )
+	                                    _react2.default.createElement(_reactChartjs.Bar, { data: barChart })
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -187,11 +235,7 @@
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'ui raised segment' },
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        null,
-	                                        'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.'
-	                                    )
+	                                    _react2.default.createElement(_reactChartjs.Doughnut, { data: donutChart })
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -200,11 +244,7 @@
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'ui raised segment' },
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        null,
-	                                        'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.'
-	                                    )
+	                                    _react2.default.createElement(_reactChartjs.Radar, { data: radarData })
 	                                )
 	                            )
 	                        )

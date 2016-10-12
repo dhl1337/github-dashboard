@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Line} from 'react-chartjs';
+import {Line, Doughnut, Bar, Radar} from 'react-chartjs';
 
 
 class Main extends React.Component {
@@ -30,12 +30,94 @@ class Main extends React.Component {
             ]
         };
 
+        const donutChart = {
+            labels: [
+                "Red",
+                "Blue",
+                "Yellow"
+            ],
+            datasets: [
+                {
+                    data: [300, 50, 100],
+                    backgroundColor: [
+                        "#FF6384",
+                        "#36A2EB",
+                        "#FFCE56"
+                    ],
+                    hoverBackgroundColor: [
+                        "#FF6384",
+                        "#36A2EB",
+                        "#FFCE56"
+                    ]
+                }]
+        };
+
+        const barChart = {
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            datasets: [
+                {
+                    label: "My First dataset",
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1,
+                    data: [65, 59, 100, 81, 56, 55, 40],
+                }
+            ]
+        };
+
+        const radarData = {
+            labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
+            datasets: [
+                {
+                    label: "My First dataset",
+                    backgroundColor: "rgba(179,181,198,0.2)",
+                    borderColor: "rgba(179,181,198,1)",
+                    pointBackgroundColor: "rgba(179,181,198,1)",
+                    pointBorderColor: "#fff",
+                    pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgba(179,181,198,1)",
+                    data: [65, 59, 90, 81, 56, 55, 40]
+                },
+                {
+                    label: "My Second dataset",
+                    backgroundColor: "rgba(255,99,132,0.2)",
+                    borderColor: "rgba(255,99,132,1)",
+                    pointBackgroundColor: "rgba(255,99,132,1)",
+                    pointBorderColor: "#fff",
+                    pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgba(255,99,132,1)",
+                    data: [28, 48, 40, 19, 96, 27, 100]
+                }
+            ]
+        };
+
         return (
                 <div className="ui stackable grid">
                     <div className="two wide column">
                         <div className="ui left fixed vertical menu">
                             <div className="item">
-                                <img className="ui mini circular image" src="http://www.geo-jobe.com/wp-content/uploads/2016/06/dan360.png"/>
+                                <img className="ui tiny middle aligned circular image" src="http://www.geo-jobe.com/wp-content/uploads/2016/06/dan360.png"/>
+                                <span> Dan Le</span>
+                            </div>
+                            <div className="item">
+                                <div className="ui fluid icon input">
+                                    <input type="text" placeholder="Search for user ...." />
+                                    <i className="search icon"></i>
+                                </div>
                             </div>
                             <a className="item">Features</a>
                             <a className="item">Testimonials</a>
@@ -44,12 +126,6 @@ class Main extends React.Component {
                     </div>
                     <div className="fourteen wide column">
                         <div className="ui container">
-                            <div className="ui basic segment">
-                                <div className="ui fluid icon input">
-                                    <input type="text" placeholder="Search for user ...." />
-                                        <i className="search icon"></i>
-                                </div>
-                            </div>
                             <div className="ui grid">
                                 <div className="twelve wide column">
                                     <div className="ui raised segment">
@@ -58,24 +134,24 @@ class Main extends React.Component {
                                 </div>
                                 <div className="four wide column">
                                     <div className="ui raised segment">
-
+                                        <Doughnut data={donutChart}/>
                                     </div>
                                 </div>
                             </div>
                             <div className="ui equal width grid">
                                 <div className="column">
                                     <div className="ui raised segment">
-                                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                        <Bar data={barChart}/>
                                     </div>
                                 </div>
                                 <div className="column">
                                     <div className="ui raised segment">
-                                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                        <Doughnut data={donutChart}/>
                                     </div>
                                 </div>
                                 <div className="column">
                                     <div className="ui raised segment">
-                                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                        <Radar data={radarData}/>
                                     </div>
                                 </div>
                             </div>
