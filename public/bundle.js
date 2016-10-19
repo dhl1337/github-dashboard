@@ -162,111 +162,70 @@
 
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'ui stackable grid', style: styles.grid },
+	                { className: 'ui stackable grid container', style: styles.grid },
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'two wide column' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'ui left fixed vertical menu' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'item' },
-	                            _react2.default.createElement('img', { className: 'ui tiny middle aligned circular image', src: 'http://www.geo-jobe.com/wp-content/uploads/2016/06/dan360.png' }),
-	                            _react2.default.createElement(
-	                                'span',
-	                                null,
-	                                ' Dan Le'
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'item' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'ui fluid icon input' },
-	                                _react2.default.createElement('input', { type: 'text', placeholder: 'Search for user ....' }),
-	                                _react2.default.createElement('i', { className: 'search icon' })
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'a',
-	                            { className: 'item' },
-	                            'Features'
-	                        ),
-	                        _react2.default.createElement(
-	                            'a',
-	                            { className: 'item' },
-	                            'Testimonials'
-	                        ),
-	                        _react2.default.createElement(
-	                            'a',
-	                            { className: 'item' },
-	                            'Sign-in'
-	                        )
-	                    )
+	                    { className: 'sixteen wide column' },
+	                    _react2.default.createElement('img', { className: 'ui small rounded image',
+	                        src: 'http://www.geo-jobe.com/wp-content/uploads/2016/06/dan360.png' })
 	                ),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'fourteen wide column' },
+	                    { className: 'sixteen wide column' },
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 'ui container' },
+	                        { className: 'ui grid' },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'ui grid' },
+	                            { className: 'sixteen wide column' },
 	                            _react2.default.createElement(
 	                                'div',
-	                                { className: 'sixteen wide column' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'ui raised segment' },
-	                                    _react2.default.createElement(_reactChartjs.Line, { data: chartData, width: '900', height: '250' })
-	                                )
+	                                { className: 'ui raised segment' },
+	                                _react2.default.createElement(_reactChartjs.Line, { data: chartData, width: '900', height: '250' })
+	                            )
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'ui equal width grid' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'column' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'ui raised segment' },
+	                                _react2.default.createElement(_reactChartjs.Bar, { data: barChart })
 	                            )
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'ui equal width grid' },
+	                            { className: 'column' },
 	                            _react2.default.createElement(
 	                                'div',
-	                                { className: 'column' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'ui raised segment' },
-	                                    _react2.default.createElement(_reactChartjs.Bar, { data: barChart })
-	                                )
-	                            ),
+	                                { className: 'ui raised segment' },
+	                                _react2.default.createElement(_reactChartjs.Radar, { data: radarData })
+	                            )
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'ui equal width grid' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'column' },
 	                            _react2.default.createElement(
 	                                'div',
-	                                { className: 'column' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'ui raised segment' },
-	                                    _react2.default.createElement(_reactChartjs.Radar, { data: radarData })
-	                                )
+	                                { className: 'ui raised segment' },
+	                                _react2.default.createElement(_reactChartjs.HorizontalBar, { data: horizontalData, width: '600', height: '250', redraw: true })
 	                            )
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'ui equal width grid' },
+	                            { className: 'column' },
 	                            _react2.default.createElement(
 	                                'div',
-	                                { className: 'column' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'ui raised segment' },
-	                                    _react2.default.createElement(_reactChartjs.HorizontalBar, { data: horizontalData, width: '600', height: '250', redraw: true })
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'column' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'ui raised segment' },
-	                                    _react2.default.createElement(_reactChartjs.Doughnut, { data: donutChart, width: '600', height: '250', redraw: true })
-	                                )
+	                                { className: 'ui raised segment' },
+	                                _react2.default.createElement(_reactChartjs.Doughnut, { data: donutChart, width: '600', height: '250', redraw: true })
 	                            )
 	                        )
 	                    )

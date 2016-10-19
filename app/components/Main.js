@@ -139,62 +139,49 @@ class Main extends React.Component {
         };
 
         return (
-                <div className="ui stackable grid" style={styles.grid}>
-                    <div className="two wide column">
-                        <div className="ui left fixed vertical menu">
-                            <div className="item">
-                                <img className="ui tiny middle aligned circular image" src="http://www.geo-jobe.com/wp-content/uploads/2016/06/dan360.png"/>
-                                <span> Dan Le</span>
+            <div className="ui stackable grid container" style={styles.grid}>
+                <div className="sixteen wide column">
+                    <img className="ui small rounded image"
+                         src="http://www.geo-jobe.com/wp-content/uploads/2016/06/dan360.png"/>
+                </div>
+                <div className="sixteen wide column">
+                    <div className="ui grid">
+                        <div className="sixteen wide column">
+                            <div className="ui raised segment">
+                                <Line data={chartData} width="900" height="250"/>
                             </div>
-                            <div className="item">
-                                <div className="ui fluid icon input">
-                                    <input type="text" placeholder="Search for user ...." />
-                                    <i className="search icon"></i>
-                                </div>
-                            </div>
-                            <a className="item">Features</a>
-                            <a className="item">Testimonials</a>
-                            <a className="item">Sign-in</a>
                         </div>
                     </div>
-                    <div className="fourteen wide column">
-                        <div className="ui container">
-                            <div className="ui grid">
-                                <div className="sixteen wide column">
-                                    <div className="ui raised segment">
-                                        <Line data={chartData} width="900" height="250"/>
-                                    </div>
-                                </div>
+                    <div className="ui equal width grid">
+                        <div className="column">
+                            <div className="ui raised segment">
+                                <Bar data={barChart}/>
                             </div>
-                            <div className="ui equal width grid">
-                                <div className="column">
-                                    <div className="ui raised segment">
-                                        <Bar data={barChart}/>
-                                    </div>
-                                </div>
-                                <div className="column">
-                                    <div className="ui raised segment">
-                                        <Radar data={radarData}/>
-                                    </div>
-                                </div>
+                        </div>
+                        <div className="column">
+                            <div className="ui raised segment">
+                                <Radar data={radarData}/>
                             </div>
-                            <div className="ui equal width grid">
-                                <div className="column">
-                                    <div className="ui raised segment">
-                                        <HorizontalBar data={horizontalData} width="600" height="250" redraw/>
-                                    </div>
-                                </div>
-                                <div className="column">
-                                    <div className="ui raised segment">
-                                        <Doughnut data={donutChart} width="600" height="250" redraw/>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div className="ui equal width grid">
+                        <div className="column">
+                            <div className="ui raised segment">
+                                <HorizontalBar data={horizontalData} width="600" height="250" redraw/>
+                            </div>
+                        </div>
+                        <div className="column">
+                            <div className="ui raised segment">
+                                <Doughnut data={donutChart} width="600" height="250" redraw/>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         )
     }
 }
 
-ReactDOM.render(<Main/>, document.getElementById('app'));
+ReactDOM.render(
+    <Main/>
+    , document.getElementById('app'));
