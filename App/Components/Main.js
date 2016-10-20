@@ -1,34 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Line, Doughnut, Bar, Radar, HorizontalBar} from 'react-chartjs-2';
-
+import {Doughnut, Bar, Radar, HorizontalBar} from 'react-chartjs-2';
+import Chart from './Chart';
 
 class Main extends React.Component {
 
     render() {
-        const chartData = {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
-            datasets: [
-                {
-                    label: "My First dataset",
-                    fill: false,
-                    lineTension: 0.1,
-                    borderCapStyle: 'butt',
-                    borderDash: [],
-                    borderDashOffset: 0.0,
-                    borderJoinStyle: 'miter',
-                    pointBorderColor: "rgba(75,192,192,1)",
-                    pointBorderWidth: 1,
-                    pointHoverRadius: 5,
-                    pointHoverBorderColor: "rgba(220,220,220,1)",
-                    pointHoverBorderWidth: 2,
-                    pointRadius: 1,
-                    pointHitRadius: 10,
-                    data: [65, 59, 80, 81, 56, 55, 40],
-                    spanGaps: false,
-                }
-            ]
-        };
 
         const donutChart = {
             labels: [
@@ -148,7 +125,7 @@ class Main extends React.Component {
                     <div className="ui grid">
                         <div className="sixteen wide column">
                             <div className="ui raised segment">
-                                <Line data={chartData} width="900" height="250"/>
+                                <Chart />
                             </div>
                         </div>
                     </div>
@@ -184,4 +161,4 @@ class Main extends React.Component {
 
 ReactDOM.render(
     <Main/>
-    , document.getElementById('app'));
+    , document.getElementById('App'));
