@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Line} from 'react-chartjs-2'
 
-class Chart extends Component {
+class LineChart extends Component {
     render() {
         const chartData = {
             labels: ["January", "February", "March", "April", "May", "June", "July"],
@@ -33,4 +33,4 @@ class Chart extends Component {
     }
 }
 
-export default Chart
+export default LineChart

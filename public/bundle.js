@@ -58,9 +58,13 @@
 
 	var _reactChartjs = __webpack_require__(172);
 
-	var _Chart = __webpack_require__(324);
+	var _LineChart = __webpack_require__(327);
 
-	var _Chart2 = _interopRequireDefault(_Chart);
+	var _LineChart2 = _interopRequireDefault(_LineChart);
+
+	var _RadarChart = __webpack_require__(326);
+
+	var _RadarChart2 = _interopRequireDefault(_RadarChart);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -103,29 +107,6 @@
 	                }]
 	            };
 
-	            var radarData = {
-	                labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
-	                datasets: [{
-	                    label: "My First dataset",
-	                    backgroundColor: "rgba(179,181,198,0.2)",
-	                    borderColor: "rgba(179,181,198,1)",
-	                    pointBackgroundColor: "rgba(179,181,198,1)",
-	                    pointBorderColor: "#fff",
-	                    pointHoverBackgroundColor: "#fff",
-	                    pointHoverBorderColor: "rgba(179,181,198,1)",
-	                    data: [65, 59, 90, 81, 56, 55, 40]
-	                }, {
-	                    label: "My Second dataset",
-	                    backgroundColor: "rgba(255,99,132,0.2)",
-	                    borderColor: "rgba(255,99,132,1)",
-	                    pointBackgroundColor: "rgba(255,99,132,1)",
-	                    pointBorderColor: "#fff",
-	                    pointHoverBackgroundColor: "#fff",
-	                    pointHoverBorderColor: "rgba(255,99,132,1)",
-	                    data: [28, 48, 40, 19, 96, 27, 100]
-	                }]
-	            };
-
 	            var horizontalData = {
 	                labels: ["January", "February", "March", "April", "May", "June", "July"],
 	                datasets: [{
@@ -164,7 +145,7 @@
 	                            _react2.default.createElement(
 	                                'div',
 	                                { className: 'ui raised segment' },
-	                                _react2.default.createElement(_Chart2.default, null)
+	                                _react2.default.createElement(_LineChart2.default, null)
 	                            )
 	                        )
 	                    ),
@@ -186,7 +167,7 @@
 	                            _react2.default.createElement(
 	                                'div',
 	                                { className: 'ui raised segment' },
-	                                _react2.default.createElement(_reactChartjs.Radar, { data: radarData })
+	                                _react2.default.createElement(_RadarChart2.default, null)
 	                            )
 	                        )
 	                    ),
@@ -47225,7 +47206,9 @@
 	exports.default = deepEqual;
 
 /***/ },
-/* 324 */
+/* 324 */,
+/* 325 */,
+/* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47250,16 +47233,86 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Chart = function (_Component) {
-	    _inherits(Chart, _Component);
+	var RadarChart = function (_Component) {
+	    _inherits(RadarChart, _Component);
 
-	    function Chart() {
-	        _classCallCheck(this, Chart);
+	    function RadarChart() {
+	        _classCallCheck(this, RadarChart);
 
-	        return _possibleConstructorReturn(this, (Chart.__proto__ || Object.getPrototypeOf(Chart)).apply(this, arguments));
+	        return _possibleConstructorReturn(this, (RadarChart.__proto__ || Object.getPrototypeOf(RadarChart)).apply(this, arguments));
 	    }
 
-	    _createClass(Chart, [{
+	    _createClass(RadarChart, [{
+	        key: 'render',
+	        value: function render() {
+	            var radarData = {
+	                labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
+	                datasets: [{
+	                    label: "My First dataset",
+	                    backgroundColor: "rgba(179,181,198,0.2)",
+	                    borderColor: "rgba(179,181,198,1)",
+	                    pointBackgroundColor: "rgba(179,181,198,1)",
+	                    pointBorderColor: "#fff",
+	                    pointHoverBackgroundColor: "#fff",
+	                    pointHoverBorderColor: "rgba(179,181,198,1)",
+	                    data: [65, 59, 90, 81, 56, 55, 40]
+	                }, {
+	                    label: "My Second dataset",
+	                    backgroundColor: "rgba(255,99,132,0.2)",
+	                    borderColor: "rgba(255,99,132,1)",
+	                    pointBackgroundColor: "rgba(255,99,132,1)",
+	                    pointBorderColor: "#fff",
+	                    pointHoverBackgroundColor: "#fff",
+	                    pointHoverBorderColor: "rgba(255,99,132,1)",
+	                    data: [28, 48, 40, 19, 96, 27, 100]
+	                }]
+	            };
+
+	            return _react2.default.createElement(_reactChartjs.Radar, { data: radarData });
+	        }
+	    }]);
+
+	    return RadarChart;
+	}(_react.Component);
+
+	exports.default = RadarChart;
+
+/***/ },
+/* 327 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactChartjs = __webpack_require__(172);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var LineChart = function (_Component) {
+	    _inherits(LineChart, _Component);
+
+	    function LineChart() {
+	        _classCallCheck(this, LineChart);
+
+	        return _possibleConstructorReturn(this, (LineChart.__proto__ || Object.getPrototypeOf(LineChart)).apply(this, arguments));
+	    }
+
+	    _createClass(LineChart, [{
 	        key: 'render',
 	        value: function render() {
 	            var chartData = {
@@ -47288,10 +47341,10 @@
 	        }
 	    }]);
 
-	    return Chart;
+	    return LineChart;
 	}(_react.Component);
 
-	exports.default = Chart;
+	exports.default = LineChart;
 
 /***/ }
 /******/ ]);

@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Doughnut, Bar, Radar, HorizontalBar} from 'react-chartjs-2';
-import Chart from './Chart';
+import {Doughnut, Bar, HorizontalBar} from 'react-chartjs-2';
+import LineChart from './LineChart';
+import RadarChart from './RadarChart';
 
 class Main extends React.Component {
 
@@ -56,31 +57,7 @@ class Main extends React.Component {
             ]
         };
 
-        const radarData = {
-            labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
-            datasets: [
-                {
-                    label: "My First dataset",
-                    backgroundColor: "rgba(179,181,198,0.2)",
-                    borderColor: "rgba(179,181,198,1)",
-                    pointBackgroundColor: "rgba(179,181,198,1)",
-                    pointBorderColor: "#fff",
-                    pointHoverBackgroundColor: "#fff",
-                    pointHoverBorderColor: "rgba(179,181,198,1)",
-                    data: [65, 59, 90, 81, 56, 55, 40]
-                },
-                {
-                    label: "My Second dataset",
-                    backgroundColor: "rgba(255,99,132,0.2)",
-                    borderColor: "rgba(255,99,132,1)",
-                    pointBackgroundColor: "rgba(255,99,132,1)",
-                    pointBorderColor: "#fff",
-                    pointHoverBackgroundColor: "#fff",
-                    pointHoverBorderColor: "rgba(255,99,132,1)",
-                    data: [28, 48, 40, 19, 96, 27, 100]
-                }
-            ]
-        };
+
 
         const horizontalData = {
             labels: ["January", "February", "March", "April", "May", "June", "July"],
@@ -125,7 +102,7 @@ class Main extends React.Component {
                     <div className="ui grid">
                         <div className="sixteen wide column">
                             <div className="ui raised segment">
-                                <Chart />
+                                <LineChart />
                             </div>
                         </div>
                     </div>
@@ -137,7 +114,7 @@ class Main extends React.Component {
                         </div>
                         <div className="column">
                             <div className="ui raised segment">
-                                <Radar data={radarData}/>
+                                <RadarChart />
                             </div>
                         </div>
                     </div>
