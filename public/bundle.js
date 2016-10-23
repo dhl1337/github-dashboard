@@ -66,6 +66,10 @@
 
 	var _RadarChart2 = _interopRequireDefault(_RadarChart);
 
+	var _BarChart = __webpack_require__(328);
+
+	var _BarChart2 = _interopRequireDefault(_BarChart);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -93,17 +97,6 @@
 	                    data: [300, 50, 100],
 	                    backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
 	                    hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"]
-	                }]
-	            };
-
-	            var barChart = {
-	                labels: ["January", "February", "March", "April", "May", "June", "July"],
-	                datasets: [{
-	                    label: "My First dataset",
-	                    backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
-	                    borderColor: ['rgba(255,99,132,1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
-	                    borderWidth: 1,
-	                    data: [65, 59, 100, 81, 56, 55, 40]
 	                }]
 	            };
 
@@ -158,7 +151,7 @@
 	                            _react2.default.createElement(
 	                                'div',
 	                                { className: 'ui raised segment' },
-	                                _react2.default.createElement(_reactChartjs.Bar, { data: barChart })
+	                                _react2.default.createElement(_BarChart2.default, null)
 	                            )
 	                        ),
 	                        _react2.default.createElement(
@@ -47345,6 +47338,64 @@
 	}(_react.Component);
 
 	exports.default = LineChart;
+
+/***/ },
+/* 328 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactChartjs = __webpack_require__(172);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var BarChart = function (_Component) {
+	    _inherits(BarChart, _Component);
+
+	    function BarChart() {
+	        _classCallCheck(this, BarChart);
+
+	        return _possibleConstructorReturn(this, (BarChart.__proto__ || Object.getPrototypeOf(BarChart)).apply(this, arguments));
+	    }
+
+	    _createClass(BarChart, [{
+	        key: 'render',
+	        value: function render() {
+	            var barChart = {
+	                labels: ["January", "February", "March", "April", "May", "June", "July"],
+	                datasets: [{
+	                    label: "My First dataset",
+	                    backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
+	                    borderColor: ['rgba(255,99,132,1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
+	                    borderWidth: 1,
+	                    data: [65, 59, 100, 81, 56, 55, 40]
+	                }]
+	            };
+
+	            return _react2.default.createElement(_reactChartjs.Bar, { data: barChart });
+	        }
+	    }]);
+
+	    return BarChart;
+	}(_react.Component);
+
+	exports.default = BarChart;
 
 /***/ }
 /******/ ]);
