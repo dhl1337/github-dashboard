@@ -1,35 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Doughnut, HorizontalBar} from 'react-chartjs-2';
+import {HorizontalBar} from 'react-chartjs-2';
 import LineChart from './LineChart';
 import RadarChart from './RadarChart';
 import BarChart from './BarChart';
+import DonutChart from './DonutChart';
 
 class Main extends React.Component {
 
     render() {
-
-        const donutChart = {
-            labels: [
-                "Red",
-                "Blue",
-                "Yellow"
-            ],
-            datasets: [
-                {
-                    data: [300, 50, 100],
-                    backgroundColor: [
-                        "#FF6384",
-                        "#36A2EB",
-                        "#FFCE56"
-                    ],
-                    hoverBackgroundColor: [
-                        "#FF6384",
-                        "#36A2EB",
-                        "#FFCE56"
-                    ]
-                }]
-        };
 
         const horizontalData = {
             labels: ["January", "February", "March", "April", "May", "June", "July"],
@@ -98,7 +77,7 @@ class Main extends React.Component {
                         </div>
                         <div className="column">
                             <div className="ui raised segment">
-                                <Doughnut data={donutChart} width="600" height="250" redraw/>
+                                <DonutChart />
                             </div>
                         </div>
                     </div>
