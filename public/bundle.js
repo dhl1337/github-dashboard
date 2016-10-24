@@ -56,8 +56,6 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _reactChartjs = __webpack_require__(172);
-
 	var _LineChart = __webpack_require__(324);
 
 	var _LineChart2 = _interopRequireDefault(_LineChart);
@@ -73,6 +71,10 @@
 	var _DonutChart = __webpack_require__(327);
 
 	var _DonutChart2 = _interopRequireDefault(_DonutChart);
+
+	var _HorizontalBarChart = __webpack_require__(328);
+
+	var _HorizontalBarChart2 = _interopRequireDefault(_HorizontalBarChart);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -95,17 +97,6 @@
 	        key: 'render',
 	        value: function render() {
 
-	            var horizontalData = {
-	                labels: ["January", "February", "March", "April", "May", "June", "July"],
-	                datasets: [{
-	                    label: "My First dataset",
-	                    backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
-	                    borderColor: ['rgba(255,99,132,1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
-	                    borderWidth: 1,
-	                    data: [65, 59, 80, 81, 56, 55, 40]
-	                }]
-	            };
-
 	            var styles = {
 	                grid: {
 	                    marginTop: 20
@@ -117,9 +108,103 @@
 	                { className: 'ui stackable grid container', style: styles.grid },
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'sixteen wide column' },
-	                    _react2.default.createElement('img', { className: 'ui small rounded image',
-	                        src: 'http://www.geo-jobe.com/wp-content/uploads/2016/06/dan360.png' })
+	                    { className: 'five wide column' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'ui items' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'item' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'image' },
+	                                _react2.default.createElement('img', { className: 'ui top aligned small rounded image',
+	                                    src: 'http://www.geo-jobe.com/wp-content/uploads/2016/06/dan360.png' })
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'content' },
+	                                _react2.default.createElement(
+	                                    'a',
+	                                    { className: 'header' },
+	                                    'Dan Le'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'meta' },
+	                                    _react2.default.createElement(
+	                                        'span',
+	                                        null,
+	                                        'dhl1337'
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'description' },
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        null,
+	                                        'dhl1337@gmail.com'
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'extra' },
+	                                    'Joined on Sep 1, 2015'
+	                                )
+	                            )
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'eleven wide column' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'ui three statistics' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'statistic' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'value' },
+	                                '397'
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'label' },
+	                                'Contributions in the last year'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'statistic' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'value' },
+	                                '31,200'
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'label' },
+	                                'Views'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'statistic' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'value' },
+	                                '22'
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'label' },
+	                                'Members'
+	                            )
+	                        )
+	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'div',
@@ -168,7 +253,7 @@
 	                            _react2.default.createElement(
 	                                'div',
 	                                { className: 'ui raised segment' },
-	                                _react2.default.createElement(_reactChartjs.HorizontalBar, { data: horizontalData, width: '600', height: '250', redraw: true })
+	                                _react2.default.createElement(_HorizontalBarChart2.default, null)
 	                            )
 	                        ),
 	                        _react2.default.createElement(
@@ -47445,6 +47530,64 @@
 	}(_react.Component);
 
 	exports.default = DonutChart;
+
+/***/ },
+/* 328 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactChartjs = __webpack_require__(172);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var LineChart = function (_Component) {
+	    _inherits(LineChart, _Component);
+
+	    function LineChart() {
+	        _classCallCheck(this, LineChart);
+
+	        return _possibleConstructorReturn(this, (LineChart.__proto__ || Object.getPrototypeOf(LineChart)).apply(this, arguments));
+	    }
+
+	    _createClass(LineChart, [{
+	        key: 'render',
+	        value: function render() {
+	            var horizontalData = {
+	                labels: ["January", "February", "March", "April", "May", "June", "July"],
+	                datasets: [{
+	                    label: "My First dataset",
+	                    backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
+	                    borderColor: ['rgba(255,99,132,1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
+	                    borderWidth: 1,
+	                    data: [65, 59, 80, 81, 56, 55, 40]
+	                }]
+	            };
+
+	            return _react2.default.createElement(_reactChartjs.HorizontalBar, { data: horizontalData, width: '600', height: '250', redraw: true });
+	        }
+	    }]);
+
+	    return LineChart;
+	}(_react.Component);
+
+	exports.default = LineChart;
 
 /***/ }
 /******/ ]);
