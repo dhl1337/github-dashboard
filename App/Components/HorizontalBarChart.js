@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {HorizontalBar} from 'react-chartjs-2';
 
-class LineChart extends Component {
+class HorizontalBarChart extends Component {
     render() {
         const horizontalData = {
             labels: ["January", "February", "March", "April", "May", "June", "July"],
@@ -36,4 +36,4 @@ class LineChart extends Component {
     }
 }
 
-export default LineChart
+export default HorizontalBarChart

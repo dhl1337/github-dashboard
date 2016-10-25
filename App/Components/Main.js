@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import LineChart from './LineChart';
-import RadarChart from './RadarChart';
 import BarChart from './BarChart';
 import DonutChart from './DonutChart';
 import HorizontalBarChart from './HorizontalBarChart';
+import LineChart from './LineChart';
+import RadarChart from './RadarChart';
 
-class Main extends React.Component {
+class Main extends Component {
 
     render() {
 
@@ -106,6 +106,4 @@ class Main extends React.Component {
     }
 }
 
-ReactDOM.render(
-    <Main/>
-    , document.getElementById('App'));
+ReactDOM.render(<Main/>, document.getElementById('App'));
