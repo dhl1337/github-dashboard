@@ -56,25 +56,29 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _BarChart = __webpack_require__(326);
+	var _BarChart = __webpack_require__(172);
 
 	var _BarChart2 = _interopRequireDefault(_BarChart);
 
-	var _DonutChart = __webpack_require__(327);
+	var _DonutChart = __webpack_require__(325);
 
 	var _DonutChart2 = _interopRequireDefault(_DonutChart);
 
-	var _HorizontalBarChart = __webpack_require__(328);
+	var _HorizontalBarChart = __webpack_require__(326);
 
 	var _HorizontalBarChart2 = _interopRequireDefault(_HorizontalBarChart);
 
-	var _LineChart = __webpack_require__(172);
+	var _LineChart = __webpack_require__(327);
 
 	var _LineChart2 = _interopRequireDefault(_LineChart);
 
-	var _RadarChart = __webpack_require__(325);
+	var _RadarChart = __webpack_require__(328);
 
 	var _RadarChart2 = _interopRequireDefault(_RadarChart);
+
+	var _SearchGithub = __webpack_require__(329);
+
+	var _SearchGithub2 = _interopRequireDefault(_SearchGithub);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -105,164 +109,127 @@
 
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'ui stackable grid container', style: styles.grid },
+	                { className: 'ui container' },
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'five wide column' },
+	                    { className: 'ui stackable grid', style: styles.grid },
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 'ui items' },
+	                        { className: 'four wide column' },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'item' },
+	                            { className: 'ui items' },
 	                            _react2.default.createElement(
 	                                'div',
-	                                { className: 'image' },
-	                                _react2.default.createElement('img', { className: 'ui top aligned small rounded image',
-	                                    src: 'http://www.geo-jobe.com/wp-content/uploads/2016/06/dan360.png' })
+	                                { className: 'item' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'image' },
+	                                    _react2.default.createElement('img', { className: 'ui top aligned small rounded image',
+	                                        src: 'http://www.geo-jobe.com/wp-content/uploads/2016/06/dan360.png' })
+	                                )
 	                            ),
 	                            _react2.default.createElement(
 	                                'div',
-	                                { className: 'content' },
-	                                _react2.default.createElement(
-	                                    'a',
-	                                    { className: 'header' },
-	                                    'Dan Le'
-	                                ),
+	                                { className: 'item' },
 	                                _react2.default.createElement(
 	                                    'div',
-	                                    { className: 'meta' },
+	                                    { className: 'content' },
 	                                    _react2.default.createElement(
-	                                        'span',
-	                                        null,
-	                                        'dhl1337'
-	                                    )
-	                                ),
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'description' },
+	                                        'a',
+	                                        { className: 'header' },
+	                                        'Dan Le'
+	                                    ),
 	                                    _react2.default.createElement(
-	                                        'p',
-	                                        null,
-	                                        'dhl1337@gmail.com'
+	                                        'div',
+	                                        { className: 'meta' },
+	                                        _react2.default.createElement(
+	                                            'span',
+	                                            null,
+	                                            'dhl1337'
+	                                        )
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'description' },
+	                                        _react2.default.createElement(
+	                                            'p',
+	                                            null,
+	                                            'dhl1337@gmail.com'
+	                                        )
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'extra' },
+	                                        'Joined on Sep 1, 2015'
 	                                    )
-	                                ),
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'extra' },
-	                                    'Joined on Sep 1, 2015'
 	                                )
 	                            )
 	                        )
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'eleven wide column' },
+	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 'ui three statistics' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'statistic' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'value' },
-	                                '397'
-	                            ),
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'label' },
-	                                'Contributions in the last year'
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'statistic' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'value' },
-	                                '31,200'
-	                            ),
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'label' },
-	                                'Views'
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'statistic' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'value' },
-	                                '22'
-	                            ),
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'label' },
-	                                'Members'
-	                            )
-	                        )
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'sixteen wide column' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'ui grid' },
+	                        { className: 'eleven wide column' },
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: 'sixteen wide column' },
+	                            _react2.default.createElement(_SearchGithub2.default, null),
 	                            _react2.default.createElement(
 	                                'div',
-	                                { className: 'ui raised segment' },
-	                                _react2.default.createElement(_LineChart2.default, null)
-	                            )
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'ui equal width grid' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'column' },
+	                                { className: 'ui grid' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'sixteen wide column' },
+	                                    _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'ui raised segment' },
+	                                        _react2.default.createElement(_LineChart2.default, null)
+	                                    )
+	                                )
+	                            ),
 	                            _react2.default.createElement(
 	                                'div',
-	                                { className: 'ui raised segment' },
-	                                _react2.default.createElement(_BarChart2.default, null)
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'column' },
+	                                { className: 'ui equal width grid' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'column' },
+	                                    _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'ui raised segment' },
+	                                        _react2.default.createElement(_BarChart2.default, null)
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'column' },
+	                                    _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'ui raised segment' },
+	                                        _react2.default.createElement(_RadarChart2.default, null)
+	                                    )
+	                                )
+	                            ),
 	                            _react2.default.createElement(
 	                                'div',
-	                                { className: 'ui raised segment' },
-	                                _react2.default.createElement(_RadarChart2.default, null)
-	                            )
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'ui equal width grid' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'column' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'ui raised segment' },
-	                                _react2.default.createElement(_HorizontalBarChart2.default, null)
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'column' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'ui raised segment' },
-	                                _react2.default.createElement(_DonutChart2.default, null)
+	                                { className: 'ui equal width grid' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'column' },
+	                                    _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'ui raised segment' },
+	                                        _react2.default.createElement(_HorizontalBarChart2.default, null)
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'column' },
+	                                    _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'ui raised segment' },
+	                                        _react2.default.createElement(_DonutChart2.default, null)
+	                                    )
+	                                )
 	                            )
 	                        )
 	                    )
@@ -21669,48 +21636,37 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var LineChart = function (_Component) {
-	    _inherits(LineChart, _Component);
+	var BarChart = function (_Component) {
+	    _inherits(BarChart, _Component);
 
-	    function LineChart() {
-	        _classCallCheck(this, LineChart);
+	    function BarChart() {
+	        _classCallCheck(this, BarChart);
 
-	        return _possibleConstructorReturn(this, (LineChart.__proto__ || Object.getPrototypeOf(LineChart)).apply(this, arguments));
+	        return _possibleConstructorReturn(this, (BarChart.__proto__ || Object.getPrototypeOf(BarChart)).apply(this, arguments));
 	    }
 
-	    _createClass(LineChart, [{
+	    _createClass(BarChart, [{
 	        key: 'render',
 	        value: function render() {
-	            var chartData = {
+	            var barChart = {
 	                labels: ["January", "February", "March", "April", "May", "June", "July"],
 	                datasets: [{
 	                    label: "My First dataset",
-	                    fill: false,
-	                    lineTension: 0.1,
-	                    borderCapStyle: 'butt',
-	                    borderDash: [],
-	                    borderDashOffset: 0.0,
-	                    borderJoinStyle: 'miter',
-	                    pointBorderColor: "rgba(75,192,192,1)",
-	                    pointBorderWidth: 1,
-	                    pointHoverRadius: 5,
-	                    pointHoverBorderColor: "rgba(220,220,220,1)",
-	                    pointHoverBorderWidth: 2,
-	                    pointRadius: 1,
-	                    pointHitRadius: 10,
-	                    data: [65, 59, 80, 81, 56, 55, 40],
-	                    spanGaps: false
+	                    backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
+	                    borderColor: ['rgba(255,99,132,1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
+	                    borderWidth: 1,
+	                    data: [65, 59, 100, 81, 56, 55, 40]
 	                }]
 	            };
 
-	            return _react2.default.createElement(_reactChartjs.Line, { data: chartData, width: '900', height: '250' });
+	            return _react2.default.createElement(_reactChartjs.Bar, { data: barChart });
 	        }
 	    }]);
 
-	    return LineChart;
+	    return BarChart;
 	}(_react.Component);
 
-	exports.default = LineChart;
+	exports.default = BarChart;
 
 /***/ },
 /* 173 */
@@ -47373,134 +47329,6 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var RadarChart = function (_Component) {
-	    _inherits(RadarChart, _Component);
-
-	    function RadarChart() {
-	        _classCallCheck(this, RadarChart);
-
-	        return _possibleConstructorReturn(this, (RadarChart.__proto__ || Object.getPrototypeOf(RadarChart)).apply(this, arguments));
-	    }
-
-	    _createClass(RadarChart, [{
-	        key: 'render',
-	        value: function render() {
-	            var radarData = {
-	                labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
-	                datasets: [{
-	                    label: "My First dataset",
-	                    backgroundColor: "rgba(179,181,198,0.2)",
-	                    borderColor: "rgba(179,181,198,1)",
-	                    pointBackgroundColor: "rgba(179,181,198,1)",
-	                    pointBorderColor: "#fff",
-	                    pointHoverBackgroundColor: "#fff",
-	                    pointHoverBorderColor: "rgba(179,181,198,1)",
-	                    data: [65, 59, 90, 81, 56, 55, 40]
-	                }, {
-	                    label: "My Second dataset",
-	                    backgroundColor: "rgba(255,99,132,0.2)",
-	                    borderColor: "rgba(255,99,132,1)",
-	                    pointBackgroundColor: "rgba(255,99,132,1)",
-	                    pointBorderColor: "#fff",
-	                    pointHoverBackgroundColor: "#fff",
-	                    pointHoverBorderColor: "rgba(255,99,132,1)",
-	                    data: [28, 48, 40, 19, 96, 27, 100]
-	                }]
-	            };
-
-	            return _react2.default.createElement(_reactChartjs.Radar, { data: radarData });
-	        }
-	    }]);
-
-	    return RadarChart;
-	}(_react.Component);
-
-	exports.default = RadarChart;
-
-/***/ },
-/* 326 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactChartjs = __webpack_require__(173);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var BarChart = function (_Component) {
-	    _inherits(BarChart, _Component);
-
-	    function BarChart() {
-	        _classCallCheck(this, BarChart);
-
-	        return _possibleConstructorReturn(this, (BarChart.__proto__ || Object.getPrototypeOf(BarChart)).apply(this, arguments));
-	    }
-
-	    _createClass(BarChart, [{
-	        key: 'render',
-	        value: function render() {
-	            var barChart = {
-	                labels: ["January", "February", "March", "April", "May", "June", "July"],
-	                datasets: [{
-	                    label: "My First dataset",
-	                    backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
-	                    borderColor: ['rgba(255,99,132,1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
-	                    borderWidth: 1,
-	                    data: [65, 59, 100, 81, 56, 55, 40]
-	                }]
-	            };
-
-	            return _react2.default.createElement(_reactChartjs.Bar, { data: barChart });
-	        }
-	    }]);
-
-	    return BarChart;
-	}(_react.Component);
-
-	exports.default = BarChart;
-
-/***/ },
-/* 327 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactChartjs = __webpack_require__(173);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
 	var DonutChart = function (_Component) {
 	    _inherits(DonutChart, _Component);
 
@@ -47532,7 +47360,7 @@
 	exports.default = DonutChart;
 
 /***/ },
-/* 328 */
+/* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47588,6 +47416,207 @@
 	}(_react.Component);
 
 	exports.default = HorizontalBarChart;
+
+/***/ },
+/* 327 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactChartjs = __webpack_require__(173);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var LineChart = function (_Component) {
+	    _inherits(LineChart, _Component);
+
+	    function LineChart() {
+	        _classCallCheck(this, LineChart);
+
+	        return _possibleConstructorReturn(this, (LineChart.__proto__ || Object.getPrototypeOf(LineChart)).apply(this, arguments));
+	    }
+
+	    _createClass(LineChart, [{
+	        key: 'render',
+	        value: function render() {
+	            var chartData = {
+	                labels: ["January", "February", "March", "April", "May", "June", "July"],
+	                datasets: [{
+	                    label: "My First dataset",
+	                    fill: false,
+	                    lineTension: 0.1,
+	                    borderCapStyle: 'butt',
+	                    borderDash: [],
+	                    borderDashOffset: 0.0,
+	                    borderJoinStyle: 'miter',
+	                    pointBorderColor: "rgba(75,192,192,1)",
+	                    pointBorderWidth: 1,
+	                    pointHoverRadius: 5,
+	                    pointHoverBorderColor: "rgba(220,220,220,1)",
+	                    pointHoverBorderWidth: 2,
+	                    pointRadius: 1,
+	                    pointHitRadius: 10,
+	                    data: [65, 59, 80, 81, 56, 55, 40],
+	                    spanGaps: false
+	                }]
+	            };
+
+	            return _react2.default.createElement(_reactChartjs.Line, { data: chartData, width: '900', height: '250' });
+	        }
+	    }]);
+
+	    return LineChart;
+	}(_react.Component);
+
+	exports.default = LineChart;
+
+/***/ },
+/* 328 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactChartjs = __webpack_require__(173);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var RadarChart = function (_Component) {
+	    _inherits(RadarChart, _Component);
+
+	    function RadarChart() {
+	        _classCallCheck(this, RadarChart);
+
+	        return _possibleConstructorReturn(this, (RadarChart.__proto__ || Object.getPrototypeOf(RadarChart)).apply(this, arguments));
+	    }
+
+	    _createClass(RadarChart, [{
+	        key: 'render',
+	        value: function render() {
+	            var radarData = {
+	                labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
+	                datasets: [{
+	                    label: "My First dataset",
+	                    backgroundColor: "rgba(179,181,198,0.2)",
+	                    borderColor: "rgba(179,181,198,1)",
+	                    pointBackgroundColor: "rgba(179,181,198,1)",
+	                    pointBorderColor: "#fff",
+	                    pointHoverBackgroundColor: "#fff",
+	                    pointHoverBorderColor: "rgba(179,181,198,1)",
+	                    data: [65, 59, 90, 81, 56, 55, 40]
+	                }, {
+	                    label: "My Second dataset",
+	                    backgroundColor: "rgba(255,99,132,0.2)",
+	                    borderColor: "rgba(255,99,132,1)",
+	                    pointBackgroundColor: "rgba(255,99,132,1)",
+	                    pointBorderColor: "#fff",
+	                    pointHoverBackgroundColor: "#fff",
+	                    pointHoverBorderColor: "rgba(255,99,132,1)",
+	                    data: [28, 48, 40, 19, 96, 27, 100]
+	                }]
+	            };
+
+	            return _react2.default.createElement(_reactChartjs.Radar, { data: radarData });
+	        }
+	    }]);
+
+	    return RadarChart;
+	}(_react.Component);
+
+	exports.default = RadarChart;
+
+/***/ },
+/* 329 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SearchGithub = function (_Component) {
+	    _inherits(SearchGithub, _Component);
+
+	    function SearchGithub() {
+	        _classCallCheck(this, SearchGithub);
+
+	        return _possibleConstructorReturn(this, (SearchGithub.__proto__ || Object.getPrototypeOf(SearchGithub)).apply(this, arguments));
+	    }
+
+	    _createClass(SearchGithub, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "ui grid" },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "sixteen wide column" },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "ui fluid action input" },
+	                        _react2.default.createElement("input", { type: "text", placeholder: "Search..." }),
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "ui button" },
+	                            "Search"
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return SearchGithub;
+	}(_react.Component);
+
+	exports.default = SearchGithub;
 
 /***/ }
 /******/ ]);

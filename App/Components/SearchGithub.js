@@ -3,26 +3,12 @@ import React, {Component} from 'react';
 class SearchGithub extends Component {
     render() {
         return (
-            <div className="ui secondary  menu">
-                <a className="active item">
-                    Home
-                </a>
-                <a className="item">
-                    Messages
-                </a>
-                <a className="item">
-                    Friends
-                </a>
-                <div className="right menu">
-                    <div className="item">
-                        <div className="ui icon input">
-                            <input type="text" placeholder="Search..."/>
-                                <i className="search link icon"></i>
-                        </div>
+            <div className="ui grid">
+                <div className="sixteen wide column">
+                    <div className="ui fluid action input">
+                        <input type="text" placeholder="Search..."/>
+                        <div className="ui button">Search</div>
                     </div>
-                    <a className="ui item">
-                        Logout
-                    </a>
                 </div>
             </div>
         )
